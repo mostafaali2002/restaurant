@@ -43,9 +43,7 @@ class _BurgerPageState extends State<BurgerPage> {
             ),
             Row(
               children: [
-                GetIcon(
-                    background: Colors.amber,
-                    icon: BurgerIcon(iconColor: Colors.black)),
+                GetIcon(background: Colors.amber, icon: BurgerIcon()),
                 const Spacer(
                   flex: 1,
                 ),
@@ -89,6 +87,5 @@ class _BurgerPageState extends State<BurgerPage> {
         ),
       ),
     );
-    ;
   }
 }

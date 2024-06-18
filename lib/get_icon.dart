@@ -12,7 +12,7 @@ class GetIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30), color: background),
+          borderRadius: BorderRadius.circular(25), color: background),
       child: icon,
     );
   }
