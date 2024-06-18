@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SearchIcon extends StatelessWidget {
   const SearchIcon({
@@ -10,8 +11,8 @@ class SearchIcon extends StatelessWidget {
     return IconButton(
         onPressed: () {},
         icon: const Icon(
-          Icons.search,
-          size: 35,
+          FontAwesomeIcons.magnifyingGlass,
+          size: 25,
         ));
   }
 }

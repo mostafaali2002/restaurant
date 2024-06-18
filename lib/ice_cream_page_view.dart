@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:resto/burger_page_view.dart';
 import 'package:resto/constant.dart';
-import 'package:resto/ice_cream_page_view.dart';
 import 'package:resto/pizza_page_view.dart';
+import 'package:resto/pop_corn_page_view.dart';
 import 'package:resto/widgets/burger_icon.dart';
 import 'package:resto/widgets/food_card_item_list.dart';
 import 'package:resto/widgets/get_icon.dart';
@@ -13,14 +13,14 @@ import 'package:resto/widgets/pizza_icon.dart';
 import 'package:resto/widgets/pop_corn_icon.dart';
 import 'package:resto/widgets/search_icon.dart';
 
-class PopCornPage extends StatefulWidget {
-  const PopCornPage({super.key});
+class IceCreamPage extends StatefulWidget {
+  const IceCreamPage({super.key});
 
   @override
-  State<PopCornPage> createState() => _PopCornPageState();
+  State<IceCreamPage> createState() => _IceCreamPageState();
 }
 
-class _PopCornPageState extends State<PopCornPage> {
+class _IceCreamPageState extends State<IceCreamPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -67,37 +67,36 @@ class _PopCornPageState extends State<PopCornPage> {
                 ),
                 const Spacer(flex: 1),
                 GetIcon(
-                  background: Colors.amber,
-                  icon: PopCornIcon(iconPath: ImagesPath.kblackpop),
-                  onTap: () {},
-                ),
-                const Spacer(flex: 1),
-                GetIcon(
                   background: const Color(CColors.kbackgroundcolor),
-                  icon: const IceCreamIcon(iconPath: ImagesPath.kwhiteicecream),
+                  icon: PopCornIcon(iconPath: ImagesPath.kwhitepop),
                   onTap: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const IceCreamPage(),
+                          builder: (context) => const PopCornPage(),
                         ));
                   },
+                ),
+                const Spacer(flex: 1),
+                GetIcon(
+                  background: Colors.amber,
+                  icon: const IceCreamIcon(iconPath: ImagesPath.kblackicecream),
+                  onTap: () {},
                 ),
                 const Spacer(flex: 3),
               ],
             ),
             const SizedBox(height: 40),
             const FoodCarditemList(
-                imagePath1: "assets/images/pop.png",
-                imagePath2: "assets/images/pop.png"),
+                imagePath1: "assets/images/ice.png",
+                imagePath2: "assets/images/ice2.png"),
             const SizedBox(height: 22),
             const FoodCarditemList(
-                imagePath1: "assets/images/pop.png",
-                imagePath2: "assets/images/pop.png"),
+                imagePath1: "assets/images/ice3.png",
+                imagePath2: "assets/images/ice4.png"),
           ]),
         ),
       ),
     );
-    ;
   }
 }

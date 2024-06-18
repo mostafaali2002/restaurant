@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resto/constant.dart';
+import 'package:resto/ice_cream_page_view.dart';
+import 'package:resto/pop_corn_page_view.dart';
 import 'package:resto/widgets/food_card_item_list.dart';
 import 'package:resto/widgets/ice_cream_icon.dart';
 
@@ -64,13 +66,25 @@ class _BurgerPageState extends State<BurgerPage> {
                 GetIcon(
                   background: const Color(CColors.kbackgroundcolor),
                   icon: PopCornIcon(iconPath: ImagesPath.kwhitepop),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PopCornPage(),
+                        ));
+                  },
                 ),
                 const Spacer(flex: 1),
                 GetIcon(
                   background: const Color(CColors.kbackgroundcolor),
                   icon: const IceCreamIcon(iconPath: ImagesPath.kwhiteicecream),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const IceCreamPage(),
+                        ));
+                  },
                 ),
                 const Spacer(flex: 3),
               ],
