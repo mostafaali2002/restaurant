@@ -6,3 +6,14 @@ abstract class CColors {
   static const kfontfamilymoul = "Moul";
   static const kfontfamilymontaga = "Montaga";
 }
+
+abstract class ImagesPath {
+  static const kblackburger = "assets/images/burger.png";
+  static const kwhiteburger = "assets/images/burgerwhite.png";
+  static const kblackpizza = "assets/images/blackpizza.png";
+  static const kwhitepizza = "assets/images/Vector-1.png";
+  static const kblackpop = "assets/images/blackpop corn.png";
+  static const kwhitepop = "assets/images/pop corn.png";
+  static const kblackicecream = "assets/images/blackice.png";
+  static const kwhiteicecream = "assets/images/icewhite.png";
+}

@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:resto/burger_page_view.dart';
 import 'package:resto/constant.dart';
-import 'package:resto/widgets/food_card_item_list.dart';
-import 'package:resto/widgets/ice_cream_icon.dart';
-
-import 'package:resto/widgets/order_text.dart';
-
 import 'package:resto/pizza_page_view.dart';
-
 import 'package:resto/widgets/burger_icon.dart';
+import 'package:resto/widgets/food_card_item_list.dart';
 import 'package:resto/widgets/get_icon.dart';
 import 'package:resto/widgets/hello_text.dart';
+import 'package:resto/widgets/ice_cream_icon.dart';
+import 'package:resto/widgets/order_text.dart';
 import 'package:resto/widgets/pizza_icon.dart';
 import 'package:resto/widgets/pop_corn_icon.dart';
 import 'package:resto/widgets/search_icon.dart';
 
-class BurgerPage extends StatefulWidget {
-  const BurgerPage({super.key});
+class PopCornPage extends StatefulWidget {
+  const PopCornPage({super.key});
 
   @override
-  State<BurgerPage> createState() => _BurgerPageState();
+  State<PopCornPage> createState() => _PopCornPageState();
 }
 
-class _BurgerPageState extends State<BurgerPage> {
+class _PopCornPageState extends State<PopCornPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -44,9 +42,15 @@ class _BurgerPageState extends State<BurgerPage> {
             Row(
               children: [
                 GetIcon(
-                  background: Colors.amber,
-                  icon: BurgerIcon(iconPath: ImagesPath.kblackburger),
-                  onTap: () {},
+                  background: const Color(CColors.kbackgroundcolor),
+                  icon: BurgerIcon(iconPath: ImagesPath.kwhiteburger),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const BurgerPage(),
+                        ));
+                  },
                 ),
                 const Spacer(flex: 1),
                 GetIcon(
@@ -62,8 +66,8 @@ class _BurgerPageState extends State<BurgerPage> {
                 ),
                 const Spacer(flex: 1),
                 GetIcon(
-                  background: const Color(CColors.kbackgroundcolor),
-                  icon: PopCornIcon(iconPath: ImagesPath.kwhitepop),
+                  background: Colors.amber,
+                  icon: PopCornIcon(iconPath: ImagesPath.kblackpop),
                   onTap: () {},
                 ),
                 const Spacer(flex: 1),
@@ -87,5 +91,6 @@ class _BurgerPageState extends State<BurgerPage> {
         ),
       ),
     );
+    ;
   }
 }
