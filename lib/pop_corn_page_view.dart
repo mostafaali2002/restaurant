@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:resto/burger_page_view.dart';
 import 'package:resto/constant.dart';
 import 'package:resto/ice_cream_page_view.dart';
@@ -46,11 +48,8 @@ class _PopCornPageState extends State<PopCornPage> {
                   background: const Color(CColors.kbackgroundcolor),
                   icon: BurgerIcon(iconPath: ImagesPath.kwhiteburger),
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const BurgerPage(),
-                        ));
+                    Get.to(() => const BurgerPage(),
+                        transition: Transition.fadeIn);
                   },
                 ),
                 const Spacer(flex: 1),
@@ -58,11 +57,8 @@ class _PopCornPageState extends State<PopCornPage> {
                   background: const Color(CColors.kbackgroundcolor),
                   icon: PizaaIcon(iconPath: ImagesPath.kwhitepizza),
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const PizzaPage(),
-                        ));
+                    Get.to(() => const PizzaPage(),
+                        transition: Transition.fadeIn);
                   },
                 ),
                 const Spacer(flex: 1),
@@ -76,11 +72,8 @@ class _PopCornPageState extends State<PopCornPage> {
                   background: const Color(CColors.kbackgroundcolor),
                   icon: const IceCreamIcon(iconPath: ImagesPath.kwhiteicecream),
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const IceCreamPage(),
-                        ));
+                    Get.to(() => const IceCreamPage(),
+                        transition: Transition.fadeIn);
                   },
                 ),
                 const Spacer(flex: 3),
