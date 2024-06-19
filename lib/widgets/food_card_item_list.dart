@@ -15,8 +15,8 @@ class FoodCarditemList extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        FoodCardItem(Imagepath: imagePath1),
-        FoodCardItem(Imagepath: imagePath2),
+        FoodCardItem(imagepath: imagePath1),
+        FoodCardItem(imagepath: imagePath2),
       ],
     );
   }

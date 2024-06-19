@@ -17,3 +17,12 @@ abstract class ImagesPath {
   static const kblackicecream = "assets/images/blackice.png";
   static const kwhiteicecream = "assets/images/icewhite.png";
 }
+
+abstract class Style {
+  static const kfontsize27 = 27;
+  static const kfontsize22 = 22;
+  static const kfontsize17 = 17;
+  static const kfontsize14 = 14;
+  static const kfontsize19 = 19;
+  static const kfontsize30 = 30;
+}

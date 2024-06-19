@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:like_button/like_button.dart';
+import 'package:resto/burger_details_view.dart';
 import 'package:resto/constant.dart';
 
 class FoodCardItem extends StatelessWidget {
   const FoodCardItem({
     super.key,
-    required this.Imagepath,
+    required this.imagepath,
   });
-  final String Imagepath;
+  final String imagepath;
+
   @override
   Widget build(BuildContext context) {
     return Builder(builder: (context) {
       return GestureDetector(
-        onTap: () {},
+        onTap: () {
+          Get.to(() => const BurgerDetails(), transition: Transition.fadeIn);
+        },
         child: Container(
           height: 240,
           width: 170,
@@ -24,7 +30,7 @@ class FoodCardItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.asset(
-                  Imagepath,
+                  imagepath,
                   width: 125,
                   height: 120,
                 ),
@@ -39,17 +45,20 @@ class FoodCardItem extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
+                    Text(
                       r"$14.00",
                       style: TextStyle(fontSize: 20, fontFamily: "Moul"),
                     ),
+                    LikeButton(),
+                    /*
                     IconButton(
                       icon: Icon(Icons.favorite_border),
                       onPressed: () {},
                     )
+                    */
                   ],
                 )
               ],
