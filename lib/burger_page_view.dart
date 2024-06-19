@@ -48,13 +48,13 @@ class _BurgerPageState extends State<BurgerPage> {
               children: [
                 GetIcon(
                   background: Colors.amber,
-                  icon: BurgerIcon(iconPath: ImagesPath.kblackburger),
+                  icon: const BurgerIcon(iconPath: ImagesPath.kblackburger),
                   onTap: () {},
                 ),
                 const Spacer(flex: 1),
                 GetIcon(
                   background: const Color(CColors.kbackgroundcolor),
-                  icon: PizaaIcon(iconPath: ImagesPath.kwhitepizza),
+                  icon: const PizaaIcon(iconPath: ImagesPath.kwhitepizza),
                   onTap: () {
                     Get.to(() => const PizzaPage(),
                         transition: Transition.fadeIn);
@@ -63,7 +63,7 @@ class _BurgerPageState extends State<BurgerPage> {
                 const Spacer(flex: 1),
                 GetIcon(
                   background: const Color(CColors.kbackgroundcolor),
-                  icon: PopCornIcon(iconPath: ImagesPath.kwhitepop),
+                  icon: const PopCornIcon(iconPath: ImagesPath.kwhitepop),
                   onTap: () {
                     Get.to(() => const PopCornPage(),
                         transition: Transition.fadeIn);

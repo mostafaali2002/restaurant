@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PizaaIcon extends StatelessWidget {
-  PizaaIcon({
+  const PizaaIcon({
     super.key,
     required this.iconPath,
   });

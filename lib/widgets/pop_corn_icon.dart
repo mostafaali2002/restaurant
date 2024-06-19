@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PopCornIcon extends StatelessWidget {
-  PopCornIcon({
+  const PopCornIcon({
     super.key,
     required this.iconPath,
   });

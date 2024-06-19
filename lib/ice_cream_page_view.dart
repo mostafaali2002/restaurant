@@ -47,7 +47,7 @@ class _IceCreamPageState extends State<IceCreamPage> {
               children: [
                 GetIcon(
                   background: const Color(CColors.kbackgroundcolor),
-                  icon: BurgerIcon(iconPath: ImagesPath.kwhiteburger),
+                  icon: const BurgerIcon(iconPath: ImagesPath.kwhiteburger),
                   onTap: () {
                     Get.to(() => const BurgerPage(),
                         transition: Transition.fadeIn);
@@ -56,7 +56,7 @@ class _IceCreamPageState extends State<IceCreamPage> {
                 const Spacer(flex: 1),
                 GetIcon(
                   background: const Color(CColors.kbackgroundcolor),
-                  icon: PizaaIcon(iconPath: ImagesPath.kwhitepizza),
+                  icon: const PizaaIcon(iconPath: ImagesPath.kwhitepizza),
                   onTap: () {
                     Get.to(() => const PizzaPage(),
                         transition: Transition.fadeIn);
@@ -65,7 +65,7 @@ class _IceCreamPageState extends State<IceCreamPage> {
                 const Spacer(flex: 1),
                 GetIcon(
                   background: const Color(CColors.kbackgroundcolor),
-                  icon: PopCornIcon(iconPath: ImagesPath.kwhitepop),
+                  icon: const PopCornIcon(iconPath: ImagesPath.kwhitepop),
                   onTap: () {
                     Get.to(() => const PopCornPage(),
                         transition: Transition.fadeIn);

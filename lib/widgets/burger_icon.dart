@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BurgerIcon extends StatelessWidget {
-  BurgerIcon({
+  const BurgerIcon({
     super.key,
     required this.iconPath,
   });
