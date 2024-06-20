@@ -15,6 +15,8 @@ class GetIcon extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
+        height: 53,
+        width: 53,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25), color: background),
         child: icon,

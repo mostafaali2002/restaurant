@@ -1,30 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:resto/constant.dart';
-import 'package:resto/ice_cream_page_view.dart';
-import 'package:resto/pop_corn_page_view.dart';
-import 'package:resto/widgets/food_card_item_list.dart';
-import 'package:resto/widgets/ice_cream_icon.dart';
-
-import 'package:resto/widgets/order_text.dart';
-
-import 'package:resto/pizza_page_view.dart';
-
+import 'package:resto/views/burger_page_view.dart';
+import 'package:resto/views/pizza_page_view.dart';
+import 'package:resto/views/pop_corn_page_view.dart';
 import 'package:resto/widgets/burger_icon.dart';
+import 'package:resto/widgets/food_card_item_list.dart';
 import 'package:resto/widgets/get_icon.dart';
 import 'package:resto/widgets/hello_text.dart';
+import 'package:resto/widgets/ice_cream_icon.dart';
+import 'package:resto/widgets/order_text.dart';
 import 'package:resto/widgets/pizza_icon.dart';
 import 'package:resto/widgets/pop_corn_icon.dart';
 import 'package:resto/widgets/search_icon.dart';
 
-class BurgerPage extends StatefulWidget {
-  const BurgerPage({super.key});
+class IceCreamPage extends StatefulWidget {
+  const IceCreamPage({super.key});
 
   @override
-  State<BurgerPage> createState() => _BurgerPageState();
+  State<IceCreamPage> createState() => _IceCreamPageState();
 }
 
-class _BurgerPageState extends State<BurgerPage> {
+class _IceCreamPageState extends State<IceCreamPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -47,9 +46,12 @@ class _BurgerPageState extends State<BurgerPage> {
             Row(
               children: [
                 GetIcon(
-                  background: Colors.amber,
-                  icon: const BurgerIcon(iconPath: ImagesPath.kblackburger),
-                  onTap: () {},
+                  background: const Color(CColors.kbackgroundcolor),
+                  icon: const BurgerIcon(iconPath: ImagesPath.kwhiteburger),
+                  onTap: () {
+                    Get.to(() => const BurgerPage(),
+                        transition: Transition.fadeIn);
+                  },
                 ),
                 const Spacer(flex: 1),
                 GetIcon(
@@ -71,24 +73,21 @@ class _BurgerPageState extends State<BurgerPage> {
                 ),
                 const Spacer(flex: 1),
                 GetIcon(
-                  background: const Color(CColors.kbackgroundcolor),
-                  icon: const IceCreamIcon(iconPath: ImagesPath.kwhiteicecream),
-                  onTap: () {
-                    Get.to(() => const IceCreamPage(),
-                        transition: Transition.fadeIn);
-                  },
+                  background: Colors.amber,
+                  icon: const IceCreamIcon(iconPath: ImagesPath.kblackicecream),
+                  onTap: () {},
                 ),
                 const Spacer(flex: 3),
               ],
             ),
             const SizedBox(height: 40),
             const FoodCarditemList(
-                imagePath1: "assets/images/beef.png",
-                imagePath2: "assets/images/beef2.png"),
+                imagePath1: "assets/images/ice.png",
+                imagePath2: "assets/images/ice2.png"),
             const SizedBox(height: 22),
             const FoodCarditemList(
-                imagePath1: "assets/images/beef3.png",
-                imagePath2: "assets/images/beef4.png"),
+                imagePath1: "assets/images/ice3.png",
+                imagePath2: "assets/images/ice4.png"),
           ]),
         ),
       ),

@@ -3,6 +3,7 @@ abstract class CColors {
   static const ksearchcolor = 0xffFFFFFF;
   static const kcardcolor = 0xff3E3B3B;
   static const kyellowcolor = 0xffD7AA0B;
+  static const kbagcolor = 0xffF5E4A8;
   static const kfontfamilymoul = "Moul";
   static const kfontfamilymontaga = "Montaga";
 }
@@ -18,8 +19,8 @@ abstract class ImagesPath {
   static const kwhiteicecream = "assets/images/icewhite.png";
 }
 
-abstract class Style {
-  static const kfontsize27 = 27;
+abstract class Styles {
+  static const int kfontsize27 = 27;
   static const kfontsize22 = 22;
   static const kfontsize17 = 17;
   static const kfontsize14 = 14;

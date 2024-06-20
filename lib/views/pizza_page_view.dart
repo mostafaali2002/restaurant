@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:resto/burger_page_view.dart';
+import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:resto/constant.dart';
-import 'package:resto/ice_cream_page_view.dart';
-import 'package:resto/pizza_page_view.dart';
+import 'package:resto/views/burger_page_view.dart';
+import 'package:resto/views/ice_cream_page_view.dart';
+import 'package:resto/views/pop_corn_page_view.dart';
 import 'package:resto/widgets/burger_icon.dart';
+import 'package:resto/widgets/food_card_item.dart';
 import 'package:resto/widgets/food_card_item_list.dart';
 import 'package:resto/widgets/get_icon.dart';
 import 'package:resto/widgets/hello_text.dart';
@@ -15,14 +17,14 @@ import 'package:resto/widgets/pizza_icon.dart';
 import 'package:resto/widgets/pop_corn_icon.dart';
 import 'package:resto/widgets/search_icon.dart';
 
-class PopCornPage extends StatefulWidget {
-  const PopCornPage({super.key});
+class PizzaPage extends StatefulWidget {
+  const PizzaPage({super.key});
 
   @override
-  State<PopCornPage> createState() => _PopCornPageState();
+  State<PizzaPage> createState() => _PizzaPageState();
 }
 
-class _PopCornPageState extends State<PopCornPage> {
+class _PizzaPageState extends State<PizzaPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -46,7 +48,7 @@ class _PopCornPageState extends State<PopCornPage> {
               children: [
                 GetIcon(
                   background: const Color(CColors.kbackgroundcolor),
-                  icon: BurgerIcon(iconPath: ImagesPath.kwhiteburger),
+                  icon: const BurgerIcon(iconPath: ImagesPath.kwhiteburger),
                   onTap: () {
                     Get.to(() => const BurgerPage(),
                         transition: Transition.fadeIn);
@@ -54,18 +56,18 @@ class _PopCornPageState extends State<PopCornPage> {
                 ),
                 const Spacer(flex: 1),
                 GetIcon(
-                  background: const Color(CColors.kbackgroundcolor),
-                  icon: PizaaIcon(iconPath: ImagesPath.kwhitepizza),
-                  onTap: () {
-                    Get.to(() => const PizzaPage(),
-                        transition: Transition.fadeIn);
-                  },
+                  background: Colors.amber,
+                  icon: const PizaaIcon(iconPath: ImagesPath.kblackpizza),
+                  onTap: () {},
                 ),
                 const Spacer(flex: 1),
                 GetIcon(
-                  background: Colors.amber,
-                  icon: PopCornIcon(iconPath: ImagesPath.kblackpop),
-                  onTap: () {},
+                  background: const Color(CColors.kbackgroundcolor),
+                  icon: const PopCornIcon(iconPath: ImagesPath.kwhitepop),
+                  onTap: () {
+                    Get.to(() => const PopCornPage(),
+                        transition: Transition.fadeIn);
+                  },
                 ),
                 const Spacer(flex: 1),
                 GetIcon(
@@ -81,16 +83,15 @@ class _PopCornPageState extends State<PopCornPage> {
             ),
             const SizedBox(height: 40),
             const FoodCarditemList(
-                imagePath1: "assets/images/pop.png",
-                imagePath2: "assets/images/pop.png"),
+                imagePath1: "assets/images/pizaa.png",
+                imagePath2: "assets/images/pizaa1.png"),
             const SizedBox(height: 22),
             const FoodCarditemList(
-                imagePath1: "assets/images/pop.png",
-                imagePath2: "assets/images/pop.png"),
+                imagePath1: "assets/images/pizaa2.png",
+                imagePath2: "assets/images/pizaa.png"),
           ]),
         ),
       ),
     );
-    ;
   }
 }
