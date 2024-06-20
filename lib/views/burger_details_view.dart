@@ -106,7 +106,54 @@ class _BurgerDetailsState extends State<BurgerDetails> {
                         color: Color(CColors.kbagcolor)),
                   )
                 ],
-              )
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: const Color(CColors.kcardcolor),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                const MaterialStatePropertyAll(Colors.black),
+                            shape:
+                                MaterialStateProperty.all(const CircleBorder()),
+                          ),
+                          onPressed: () {},
+                          child: const Icon(Icons.remove),
+                        ),
+                        const Text(
+                          "1",
+                          style: TextStyle(fontSize: 25),
+                        ),
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                const MaterialStatePropertyAll(Colors.black),
+                            shape:
+                                MaterialStateProperty.all(const CircleBorder()),
+                          ),
+                          onPressed: () {},
+                          child: const Icon(Icons.add),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const Text(
+                    r"$14.00",
+                    style: TextStyle(fontSize: 30, fontFamily: "Moul"),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
