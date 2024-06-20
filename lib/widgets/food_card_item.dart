@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:like_button/like_button.dart';
 import 'package:resto/constant.dart';
 import 'package:resto/views/burger_details_view.dart';
+import 'package:resto/widgets/food_price.dart';
 
 class FoodCardItem extends StatelessWidget {
   const FoodCardItem({
@@ -49,10 +50,7 @@ class FoodCardItem extends StatelessWidget {
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      r"$14.00",
-                      style: TextStyle(fontSize: 20, fontFamily: "Moul"),
-                    ),
+                    FoodPrice(price: "14.00", textsize: 20),
                     LikeButton(
                       circleSize: 20,
                       likeCount: 100,

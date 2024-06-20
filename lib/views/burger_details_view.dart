@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:resto/constant.dart';
+import 'package:resto/widgets/food_describtion.dart';
+import 'package:resto/widgets/food_detail_image.dart';
+import 'package:resto/widgets/food_details.dart';
+import 'package:resto/widgets/food_name_and_rate.dart';
+import 'package:resto/widgets/food_price.dart';
 
 class BurgerDetails extends StatefulWidget {
   const BurgerDetails({super.key});
@@ -26,90 +31,17 @@ class _BurgerDetailsState extends State<BurgerDetails> {
                   size: 45,
                 ),
               ),
-              const SizedBox(
-                height: 12,
-              ),
-              Center(
-                child: Image.asset(
-                  "assets/images/bigBurger.png",
-                ),
-              ),
-              const SizedBox(
-                height: 27,
-              ),
-              const Row(
-                children: [
-                  Text(
-                    "Beef Burger",
-                    style: TextStyle(
-                        fontSize: 27,
-                        fontFamily: CColors.kfontfamilymoul,
-                        color: Color(CColors.kbagcolor)),
-                  ),
-                  Spacer(
-                    flex: 1,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: Colors.amber,
-                    size: 32,
-                  ),
-                  Text(
-                    "5.0",
-                    style: TextStyle(
-                        fontFamily: CColors.kfontfamilymoul, fontSize: 17),
-                  )
-                ],
-              ),
-              const SizedBox(
-                height: 41,
-              ),
-              const Text(
-                maxLines: 2,
-                "Beef Burger with spices adn cucmbers our chef special healthy and fat free dish.",
-                style: TextStyle(
-                  fontFamily: CColors.kfontfamilymontaga,
-                  fontSize: 19,
-                ),
-              ),
-              const SizedBox(
-                height: 70,
-              ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: [
-                      Text(
-                        "Delivery Time",
-                        style: TextStyle(
-                            fontFamily: CColors.kfontfamilymontaga,
-                            fontSize: 19,
-                            color: Color(CColors.kbagcolor)),
-                      ),
-                      SizedBox(
-                        height: 7,
-                      ),
-                      Text(
-                        "⏰ 20 mins",
-                        style: TextStyle(
-                            fontFamily: CColors.kfontfamilymontaga,
-                            fontSize: 19),
-                      )
-                    ],
-                  ),
-                  Text(
-                    "🔥 65 Calories",
-                    style: TextStyle(
-                        fontFamily: CColors.kfontfamilymontaga,
-                        fontSize: 19,
-                        color: Color(CColors.kbagcolor)),
-                  )
-                ],
-              ),
-              const SizedBox(
-                height: 50,
-              ),
+              const SizedBox(height: 12),
+              const FoodDetailsImage(imagePath: "assets/images/bigBurger.png"),
+              const SizedBox(height: 27),
+              const FoodNameAndRate(foodName: "Beef Burger", foodRate: "5.0"),
+              const SizedBox(height: 41),
+              const FoodDescribtion(
+                  foodDetails:
+                      "Beef Burger with spices adn cucmbers our chef special healthy and fat free dish."),
+              const SizedBox(height: 70),
+              const FoodDetails(prepareTime: "20", calories: "65"),
+              const SizedBox(height: 50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -148,10 +80,7 @@ class _BurgerDetailsState extends State<BurgerDetails> {
                       ],
                     ),
                   ),
-                  const Text(
-                    r"$14.00",
-                    style: TextStyle(fontSize: 30, fontFamily: "Moul"),
-                  ),
+                  const FoodPrice(price: "14.00", textsize: 30),
                 ],
               ),
             ],
