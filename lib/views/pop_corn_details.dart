@@ -9,14 +9,14 @@ import 'package:resto/widgets/food_details.dart';
 import 'package:resto/widgets/food_name_and_rate.dart';
 import 'package:resto/widgets/food_price.dart';
 
-class BurgerDetails extends StatefulWidget {
-  const BurgerDetails({super.key});
+class PopCornDetails extends StatefulWidget {
+  const PopCornDetails({super.key});
 
   @override
-  State<BurgerDetails> createState() => _BurgerDetailsState();
+  State<PopCornDetails> createState() => _BurgerDetailsState();
 }
 
-class _BurgerDetailsState extends State<BurgerDetails> {
+class _BurgerDetailsState extends State<PopCornDetails> {
   double price = 14.00;
   int counter = 1;
   @override
@@ -39,7 +39,7 @@ class _BurgerDetailsState extends State<BurgerDetails> {
                 ),
               ),
               const SizedBox(height: 12),
-              const FoodDetailsImage(imagePath: "assets/images/bigBurger.png"),
+              const FoodDetailsImage(imagePath: "assets/images/bigpopcorn.png"),
               const SizedBox(height: 27),
               const FoodNameAndRate(foodName: "Beef Burger", foodRate: "5.0"),
               const SizedBox(height: 41),

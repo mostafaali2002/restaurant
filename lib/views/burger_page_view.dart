@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:resto/constant.dart';
+import 'package:resto/views/burger_details_view.dart';
 import 'package:resto/views/ice_cream_page_view.dart';
 import 'package:resto/views/pizza_page_view.dart';
 import 'package:resto/views/pop_corn_page_view.dart';
@@ -83,8 +84,12 @@ class _BurgerPageState extends State<BurgerPage> {
                 imagePath1: "assets/images/beef.png",
                 imagePath2: "assets/images/beef2.png"),
             const SizedBox(height: 22),
-            const FoodCarditemList(
+            FoodCarditemList(
                 imagePath1: "assets/images/beef3.png",
+                ontap: () {
+                  Get.to(() => const BurgerDetails(),
+                      transition: Transition.leftToRight);
+                },
                 imagePath2: "assets/images/beef4.png"),
           ]),
         ),

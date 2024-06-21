@@ -4,6 +4,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:resto/constant.dart';
 import 'package:resto/views/burger_page_view.dart';
+import 'package:resto/views/ice_cream_details.dart';
 import 'package:resto/views/pizza_page_view.dart';
 import 'package:resto/views/pop_corn_page_view.dart';
 import 'package:resto/widgets/burger_icon.dart';
@@ -81,8 +82,12 @@ class _IceCreamPageState extends State<IceCreamPage> {
               ],
             ),
             const SizedBox(height: 40),
-            const FoodCarditemList(
+            FoodCarditemList(
                 imagePath1: "assets/images/ice.png",
+                ontap: () {
+                  Get.to(() => const IceCreamDetails(),
+                      transition: Transition.leftToRight);
+                },
                 imagePath2: "assets/images/ice2.png"),
             const SizedBox(height: 22),
             const FoodCarditemList(

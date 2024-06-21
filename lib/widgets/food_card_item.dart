@@ -9,17 +9,15 @@ class FoodCardItem extends StatelessWidget {
   const FoodCardItem({
     super.key,
     required this.imagepath,
+    this.ontap,
   });
   final String imagepath;
-
+  final void Function()? ontap;
   @override
   Widget build(BuildContext context) {
     return Builder(builder: (context) {
       return GestureDetector(
-        onTap: () {
-          Get.to(() => const BurgerDetails(),
-              transition: Transition.leftToRight);
-        },
+        onTap: ontap,
         child: Container(
           height: 240,
           width: 170,

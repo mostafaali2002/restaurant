@@ -5,6 +5,7 @@ import 'package:resto/constant.dart';
 import 'package:resto/views/burger_page_view.dart';
 import 'package:resto/views/ice_cream_page_view.dart';
 import 'package:resto/views/pizza_page_view.dart';
+import 'package:resto/views/pop_corn_details.dart';
 import 'package:resto/widgets/burger_icon.dart';
 import 'package:resto/widgets/food_card_item_list.dart';
 import 'package:resto/widgets/get_icon.dart';
@@ -80,13 +81,31 @@ class _PopCornPageState extends State<PopCornPage> {
               ],
             ),
             const SizedBox(height: 40),
-            const FoodCarditemList(
-                imagePath1: "assets/images/pop.png",
-                imagePath2: "assets/images/pop.png"),
+            FoodCarditemList(
+              imagePath1: "assets/images/pop.png",
+              ontap: () {
+                Get.to(() => const PopCornDetails(),
+                    transition: Transition.leftToRight);
+              },
+              imagePath2: "assets/images/pop.png",
+              ontap2: () {
+                Get.to(() => const PopCornDetails(),
+                    transition: Transition.leftToRight);
+              },
+            ),
             const SizedBox(height: 22),
-            const FoodCarditemList(
-                imagePath1: "assets/images/pop.png",
-                imagePath2: "assets/images/pop.png"),
+            FoodCarditemList(
+              imagePath1: "assets/images/pop.png",
+              ontap: () {
+                Get.to(() => const PopCornDetails(),
+                    transition: Transition.leftToRight);
+              },
+              imagePath2: "assets/images/pop.png",
+              ontap2: () {
+                Get.to(() => const PopCornDetails(),
+                    transition: Transition.leftToRight);
+              },
+            ),
           ]),
         ),
       ),

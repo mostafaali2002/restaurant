@@ -5,6 +5,7 @@ import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:resto/constant.dart';
 import 'package:resto/views/burger_page_view.dart';
 import 'package:resto/views/ice_cream_page_view.dart';
+import 'package:resto/views/pizza_details_view.dart';
 import 'package:resto/views/pop_corn_page_view.dart';
 import 'package:resto/widgets/burger_icon.dart';
 import 'package:resto/widgets/food_card_item.dart';
@@ -86,8 +87,12 @@ class _PizzaPageState extends State<PizzaPage> {
                 imagePath1: "assets/images/pizaa.png",
                 imagePath2: "assets/images/pizaa1.png"),
             const SizedBox(height: 22),
-            const FoodCarditemList(
+            FoodCarditemList(
                 imagePath1: "assets/images/pizaa2.png",
+                ontap: () {
+                  Get.to(() => const PizzaDetails(),
+                      transition: Transition.leftToRight);
+                },
                 imagePath2: "assets/images/pizaa.png"),
           ]),
         ),
