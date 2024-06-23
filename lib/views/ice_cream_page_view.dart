@@ -4,9 +4,9 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:resto/constant.dart';
 import 'package:resto/views/burger_page_view.dart';
-import 'package:resto/views/ice_cream_details.dart';
 import 'package:resto/views/pizza_page_view.dart';
 import 'package:resto/views/pop_corn_page_view.dart';
+import 'package:resto/views/resto_details/ice_cream_details.dart';
 import 'package:resto/widgets/burger_icon.dart';
 import 'package:resto/widgets/food_card_item_list.dart';
 import 'package:resto/widgets/get_icon.dart';
@@ -31,69 +31,86 @@ class _IceCreamPageState extends State<IceCreamPage> {
       child: Scaffold(
         backgroundColor: const Color(CColors.kbackgroundcolor),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                SearchIcon(),
-              ],
-            ),
-            const SizedBox(height: 25),
-            const HelloText(),
-            const OrderText(),
-            const SizedBox(height: 30),
-            Row(
-              children: [
-                GetIcon(
-                  background: const Color(CColors.kbackgroundcolor),
-                  icon: const BurgerIcon(iconPath: ImagesPath.kwhiteburger),
-                  onTap: () {
-                    Get.to(() => const BurgerPage(),
-                        transition: Transition.fadeIn);
-                  },
-                ),
-                const Spacer(flex: 1),
-                GetIcon(
-                  background: const Color(CColors.kbackgroundcolor),
-                  icon: const PizaaIcon(iconPath: ImagesPath.kwhitepizza),
-                  onTap: () {
-                    Get.to(() => const PizzaPage(),
-                        transition: Transition.fadeIn);
-                  },
-                ),
-                const Spacer(flex: 1),
-                GetIcon(
-                  background: const Color(CColors.kbackgroundcolor),
-                  icon: const PopCornIcon(iconPath: ImagesPath.kwhitepop),
-                  onTap: () {
-                    Get.to(() => const PopCornPage(),
-                        transition: Transition.fadeIn);
-                  },
-                ),
-                const Spacer(flex: 1),
-                GetIcon(
-                  background: Colors.amber,
-                  icon: const IceCreamIcon(iconPath: ImagesPath.kblackicecream),
-                  onTap: () {},
-                ),
-                const Spacer(flex: 3),
-              ],
-            ),
-            const SizedBox(height: 40),
-            FoodCarditemList(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: SingleChildScrollView(
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SearchIcon(),
+                ],
+              ),
+              const SizedBox(height: 2),
+              const HelloText(),
+              const OrderText(),
+              const SizedBox(height: 30),
+              Row(
+                children: [
+                  GetIcon(
+                    background: const Color(CColors.kbackgroundcolor),
+                    icon: const BurgerIcon(iconPath: ImagesPath.kwhiteburger),
+                    onTap: () {
+                      Get.to(() => const BurgerPage(),
+                          transition: Transition.fadeIn);
+                    },
+                  ),
+                  const Spacer(flex: 1),
+                  GetIcon(
+                    background: const Color(CColors.kbackgroundcolor),
+                    icon: const PizaaIcon(iconPath: ImagesPath.kwhitepizza),
+                    onTap: () {
+                      Get.to(() => const PizzaPage(),
+                          transition: Transition.fadeIn);
+                    },
+                  ),
+                  const Spacer(flex: 1),
+                  GetIcon(
+                    background: const Color(CColors.kbackgroundcolor),
+                    icon: const PopCornIcon(iconPath: ImagesPath.kwhitepop),
+                    onTap: () {
+                      Get.to(() => const PopCornPage(),
+                          transition: Transition.fadeIn);
+                    },
+                  ),
+                  const Spacer(flex: 1),
+                  GetIcon(
+                    background: Colors.amber,
+                    icon:
+                        const IceCreamIcon(iconPath: ImagesPath.kblackicecream),
+                    onTap: () {},
+                  ),
+                  const Spacer(flex: 3),
+                ],
+              ),
+              const SizedBox(height: 40),
+              FoodCarditemList(
                 imagePath1: "assets/images/ice.png",
+                foodName1: "Oreo Cookies",
+                smalltext1: "fresh Ice",
+                price1: "5.0",
                 ontap: () {
                   Get.to(() => const IceCreamDetails(),
                       transition: Transition.leftToRight);
                 },
-                imagePath2: "assets/images/ice2.png"),
-            const SizedBox(height: 22),
-            const FoodCarditemList(
+                imagePath2: "assets/images/ice2.png",
+                foodName2: "Straweberry",
+                smalltext2: "fresh Ice",
+                price2: "10.0",
+              ),
+              const SizedBox(height: 22),
+              const FoodCarditemList(
                 imagePath1: "assets/images/ice3.png",
-                imagePath2: "assets/images/ice4.png"),
-          ]),
+                foodName1: "Vanilla",
+                smalltext1: "fresh Ice",
+                price1: "5.0",
+                imagePath2: "assets/images/ice4.png",
+                foodName2: "Milk",
+                smalltext2: "fresh Ice",
+                price2: "9.0",
+              ),
+            ]),
+          ),
         ),
       ),
     );

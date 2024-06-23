@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:like_button/like_button.dart';
 import 'package:resto/constant.dart';
-import 'package:resto/views/burger_details_view.dart';
 import 'package:resto/widgets/food_price.dart';
 
 class FoodCardItem extends StatelessWidget {
@@ -10,8 +9,14 @@ class FoodCardItem extends StatelessWidget {
     super.key,
     required this.imagepath,
     this.ontap,
+    required this.foodName,
+    required this.smalltext,
+    required this.price,
   });
   final String imagepath;
+  final String foodName;
+  final String smalltext;
+  final String price;
   final void Function()? ontap;
   @override
   Widget build(BuildContext context) {
@@ -34,22 +39,23 @@ class FoodCardItem extends StatelessWidget {
                   width: 125,
                   height: 120,
                 ),
-                const Text(
-                  "Beef Burger",
-                  style: TextStyle(fontSize: 20, fontFamily: "Moul"),
+                Text(
+                  foodName,
+                  maxLines: 1,
+                  style: const TextStyle(fontSize: 15, fontFamily: "Moul"),
                 ),
-                const Text(
-                  "Fresh Beef",
-                  style: TextStyle(fontSize: 18, fontFamily: "Montaga"),
+                Text(
+                  smalltext,
+                  style: const TextStyle(fontSize: 18, fontFamily: "Montaga"),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    FoodPrice(price: "14.00", textsize: 20),
-                    LikeButton(
+                    FoodPrice(price: price, textsize: 20),
+                    const LikeButton(
                       circleSize: 20,
                       likeCount: 100,
                       countPostion: CountPostion.bottom,

@@ -8,11 +8,14 @@ class SearchIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-        onPressed: () {},
-        icon: const Icon(
-          FontAwesomeIcons.magnifyingGlass,
-          size: 25,
-        ));
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20),
+      child: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            FontAwesomeIcons.magnifyingGlass,
+            size: 25,
+          )),
+    );
   }
 }

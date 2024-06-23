@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:resto/views/burger_details_view.dart';
 import 'package:resto/views/burger_page_view.dart';
 
 void main() {
