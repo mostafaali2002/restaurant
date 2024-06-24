@@ -9,15 +9,15 @@ import 'package:resto/widgets/food_details.dart';
 import 'package:resto/widgets/food_name_and_rate.dart';
 import 'package:resto/widgets/food_price.dart';
 
-class BurgerDetails extends StatefulWidget {
-  const BurgerDetails({super.key});
+class BurgerDetails4 extends StatefulWidget {
+  const BurgerDetails4({super.key});
 
   @override
-  State<BurgerDetails> createState() => _BurgerDetailsState();
+  State<BurgerDetails4> createState() => _BurgerDetailsState();
 }
 
-class _BurgerDetailsState extends State<BurgerDetails> {
-  double price = 14.00;
+class _BurgerDetailsState extends State<BurgerDetails4> {
+  double price = 15.00;
   int counter = 1;
   @override
   Widget build(BuildContext context) {
@@ -41,11 +41,11 @@ class _BurgerDetailsState extends State<BurgerDetails> {
               const SizedBox(height: 12),
               const FoodDetailsImage(imagePath: "assets/images/bigBurger.png"),
               const SizedBox(height: 27),
-              const FoodNameAndRate(foodName: "Beef Burger", foodRate: "5.0"),
+              const FoodNameAndRate(foodName: "Specail Beef", foodRate: "5.0"),
               const SizedBox(height: 41),
               const FoodDescribtion(
                   foodDetails:
-                      "Beef Burger with spices adn cucmbers our chef special healthy and fat free dish."),
+                      "Beef Burger-Cheddar-Green Pepper-Olive-Tomato-Ketchup-Mayonnaise"),
               const SizedBox(height: 70),
               const FoodDetails(prepareTime: "20", calories: "65"),
               const SizedBox(height: 50),
@@ -80,7 +80,7 @@ class _BurgerDetailsState extends State<BurgerDetails> {
                           onPressed: () {
                             setState(() {
                               counter++;
-                              price = price + 14.00;
+                              price = price + 15.00;
                             });
                           },
                         ),

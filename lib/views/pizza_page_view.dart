@@ -5,11 +5,12 @@ import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:resto/constant.dart';
 import 'package:resto/views/burger_page_view.dart';
 import 'package:resto/views/ice_cream_page_view.dart';
-
 import 'package:resto/views/pop_corn_page_view.dart';
-import 'package:resto/views/resto_details/pizza_details_view.dart';
+import 'package:resto/views/resto_details/pizza_details/pizza1_details_view.dart';
+import 'package:resto/views/resto_details/pizza_details/pizza2_details_view.dart';
+import 'package:resto/views/resto_details/pizza_details/pizza3_details_view.dart';
+import 'package:resto/views/resto_details/pizza_details/pizza4_details_view.dart';
 import 'package:resto/widgets/burger_icon.dart';
-import 'package:resto/widgets/food_card_item.dart';
 import 'package:resto/widgets/food_card_item_list.dart';
 import 'package:resto/widgets/get_icon.dart';
 import 'package:resto/widgets/hello_text.dart';
@@ -86,15 +87,23 @@ class _PizzaPageState extends State<PizzaPage> {
                 ],
               ),
               const SizedBox(height: 40),
-              const FoodCarditemList(
+              FoodCarditemList(
                 imagePath1: "assets/images/pizaa.png",
                 foodName1: "chicken ranch",
                 smalltext1: "fresh Pizza",
                 price1: "15.0",
+                ontap: () {
+                  Get.to(() => const PizzaDetails1(),
+                      transition: Transition.leftToRight);
+                },
                 imagePath2: "assets/images/pizaa1.png",
                 foodName2: "Vegetables",
                 smalltext2: "fresh Pizza",
                 price2: "13.0",
+                ontap2: () {
+                  Get.to(() => const PizzaDetails2(),
+                      transition: Transition.leftToRight);
+                },
               ),
               const SizedBox(height: 22),
               FoodCarditemList(
@@ -103,13 +112,17 @@ class _PizzaPageState extends State<PizzaPage> {
                 smalltext1: "fresh Pizza",
                 price1: "16.0",
                 ontap: () {
-                  Get.to(() => const PizzaDetails(),
+                  Get.to(() => const PizzaDetails3(),
                       transition: Transition.leftToRight);
                 },
                 imagePath2: "assets/images/pizaa.png",
                 foodName2: "Smoked",
                 smalltext2: "fresh Pizza",
                 price2: "14.0",
+                ontap2: () {
+                  Get.to(() => const PizzaDetails4(),
+                      transition: Transition.leftToRight);
+                },
               ),
             ]),
           ),

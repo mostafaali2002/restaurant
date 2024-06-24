@@ -5,7 +5,10 @@ import 'package:resto/constant.dart';
 import 'package:resto/views/ice_cream_page_view.dart';
 import 'package:resto/views/pizza_page_view.dart';
 import 'package:resto/views/pop_corn_page_view.dart';
-import 'package:resto/views/resto_details/burger_details_view.dart';
+import 'package:resto/views/resto_details/burger_details/burger1_details_view.dart';
+import 'package:resto/views/resto_details/burger_details/burger2_details_view.dart';
+import 'package:resto/views/resto_details/burger_details/burger3_details_view.dart';
+import 'package:resto/views/resto_details/burger_details/burger4_details_view.dart';
 import 'package:resto/widgets/food_card_item_list.dart';
 import 'package:resto/widgets/ice_cream_icon.dart';
 import 'package:resto/widgets/order_text.dart';
@@ -83,15 +86,24 @@ class _BurgerPageState extends State<BurgerPage> {
                 ],
               ),
               const SizedBox(height: 40),
-              const FoodCarditemList(
-                  imagePath1: "assets/images/beef.png",
-                  foodName1: "Double Beef",
-                  smalltext1: "fresh Burger",
-                  price1: "14.0",
-                  imagePath2: "assets/images/beef2.png",
-                  foodName2: "Thick Beef",
-                  smalltext2: "fresh Burger",
-                  price2: "11.0"),
+              FoodCarditemList(
+                imagePath1: "assets/images/beef.png",
+                foodName1: "Double Beef",
+                smalltext1: "fresh Burger",
+                price1: "14.0",
+                ontap: () {
+                  Get.to(() => const BurgerDetails1(),
+                      transition: Transition.leftToRight);
+                },
+                imagePath2: "assets/images/beef2.png",
+                foodName2: "Thick Beef",
+                smalltext2: "fresh Burger",
+                price2: "11.0",
+                ontap2: () {
+                  Get.to(() => const BurgerDetails2(),
+                      transition: Transition.leftToRight);
+                },
+              ),
               const SizedBox(height: 22),
               FoodCarditemList(
                 imagePath1: "assets/images/beef3.png",
@@ -99,13 +111,17 @@ class _BurgerPageState extends State<BurgerPage> {
                 smalltext1: "fresh Burger",
                 price1: "15.0",
                 ontap: () {
-                  Get.to(() => const BurgerDetails(),
+                  Get.to(() => const BurgerDetails3(),
                       transition: Transition.leftToRight);
                 },
                 imagePath2: "assets/images/beef4.png",
                 foodName2: "chicken burger",
                 smalltext2: "fresh Burger",
                 price2: "10.0",
+                ontap2: () {
+                  Get.to(() => const BurgerDetails4(),
+                      transition: Transition.leftToRight);
+                },
               ),
             ]),
           ),

@@ -9,15 +9,15 @@ import 'package:resto/widgets/food_details.dart';
 import 'package:resto/widgets/food_name_and_rate.dart';
 import 'package:resto/widgets/food_price.dart';
 
-class PizzaDetails extends StatefulWidget {
-  const PizzaDetails({super.key});
+class IceCreamDetails1 extends StatefulWidget {
+  const IceCreamDetails1({super.key});
 
   @override
-  State<PizzaDetails> createState() => _BurgerDetailsState();
+  State<IceCreamDetails1> createState() => _BurgerDetailsState();
 }
 
-class _BurgerDetailsState extends State<PizzaDetails> {
-  double price = 14.00;
+class _BurgerDetailsState extends State<IceCreamDetails1> {
+  double price = 5.00;
   int counter = 1;
   @override
   Widget build(BuildContext context) {
@@ -39,13 +39,11 @@ class _BurgerDetailsState extends State<PizzaDetails> {
                 ),
               ),
               const SizedBox(height: 12),
-              const FoodDetailsImage(imagePath: "assets/images/bigpizza.png"),
+              const FoodDetailsImage(imagePath: "assets/images/bigice.png"),
               const SizedBox(height: 27),
-              const FoodNameAndRate(foodName: "Beef Burger", foodRate: "5.0"),
+              const FoodNameAndRate(foodName: "Oreo Cookies", foodRate: "5.0"),
               const SizedBox(height: 41),
-              const FoodDescribtion(
-                  foodDetails:
-                      "Beef Burger with spices adn cucmbers our chef special healthy and fat free dish."),
+              const FoodDescribtion(foodDetails: "Milk-Sugar-Cream-Cookies"),
               const SizedBox(height: 70),
               const FoodDetails(prepareTime: "20", calories: "65"),
               const SizedBox(height: 50),
@@ -66,7 +64,7 @@ class _BurgerDetailsState extends State<PizzaDetails> {
                             setState(() {
                               if (counter > 1) {
                                 counter--;
-                                price = price - 14.00;
+                                price = price - 5.00;
                               }
                             });
                           },

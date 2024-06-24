@@ -6,7 +6,10 @@ import 'package:resto/constant.dart';
 import 'package:resto/views/burger_page_view.dart';
 import 'package:resto/views/pizza_page_view.dart';
 import 'package:resto/views/pop_corn_page_view.dart';
-import 'package:resto/views/resto_details/ice_cream_details.dart';
+import 'package:resto/views/resto_details/ice_cream_details/ice_cream1_details_view.dart';
+import 'package:resto/views/resto_details/ice_cream_details/ice_cream2_details_view.dart';
+import 'package:resto/views/resto_details/ice_cream_details/ice_cream3_details_view.dart';
+import 'package:resto/views/resto_details/ice_cream_details/ice_cream4_details_view.dart';
 import 'package:resto/widgets/burger_icon.dart';
 import 'package:resto/widgets/food_card_item_list.dart';
 import 'package:resto/widgets/get_icon.dart';
@@ -90,24 +93,36 @@ class _IceCreamPageState extends State<IceCreamPage> {
                 smalltext1: "fresh Ice",
                 price1: "5.0",
                 ontap: () {
-                  Get.to(() => const IceCreamDetails(),
+                  Get.to(() => const IceCreamDetails1(),
                       transition: Transition.leftToRight);
                 },
                 imagePath2: "assets/images/ice2.png",
                 foodName2: "Straweberry",
                 smalltext2: "fresh Ice",
                 price2: "10.0",
+                ontap2: () {
+                  Get.to(() => const IceCreamDetails2(),
+                      transition: Transition.leftToRight);
+                },
               ),
               const SizedBox(height: 22),
-              const FoodCarditemList(
+              FoodCarditemList(
                 imagePath1: "assets/images/ice3.png",
                 foodName1: "Vanilla",
                 smalltext1: "fresh Ice",
                 price1: "5.0",
+                ontap: () {
+                  Get.to(() => const IceCreamDetails3(),
+                      transition: Transition.leftToRight);
+                },
                 imagePath2: "assets/images/ice4.png",
                 foodName2: "Milk",
                 smalltext2: "fresh Ice",
                 price2: "9.0",
+                ontap2: () {
+                  Get.to(() => const IceCreamDetails4(),
+                      transition: Transition.leftToRight);
+                },
               ),
             ]),
           ),

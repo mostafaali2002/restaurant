@@ -5,7 +5,7 @@ import 'package:resto/constant.dart';
 import 'package:resto/views/burger_page_view.dart';
 import 'package:resto/views/ice_cream_page_view.dart';
 import 'package:resto/views/pizza_page_view.dart';
-import 'package:resto/views/resto_details/pop_corn_details.dart';
+import 'package:resto/views/resto_details/pop_corn_details_view.dart';
 import 'package:resto/widgets/burger_icon.dart';
 import 'package:resto/widgets/food_card_item_list.dart';
 import 'package:resto/widgets/get_icon.dart';
