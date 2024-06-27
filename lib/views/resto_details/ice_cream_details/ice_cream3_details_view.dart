@@ -39,7 +39,7 @@ class _BurgerDetailsState extends State<IceCreamDetails3> {
                 ),
               ),
               const SizedBox(height: 12),
-              const FoodDetailsImage(imagePath: "assets/images/bigice.png"),
+              const FoodDetailsImage(imagePath: "assets/images/bigice3.png"),
               const SizedBox(height: 27),
               const FoodNameAndRate(foodName: "Oreo Cookies", foodRate: "5.0"),
               const SizedBox(height: 41),
@@ -78,7 +78,7 @@ class _BurgerDetailsState extends State<IceCreamDetails3> {
                           onPressed: () {
                             setState(() {
                               counter++;
-                              price = price + 14.00;
+                              price = price + 5.00;
                             });
                           },
                         ),

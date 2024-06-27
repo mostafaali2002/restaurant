@@ -66,7 +66,7 @@ class _BurgerDetailsState extends State<BurgerDetails3> {
                             setState(() {
                               if (counter > 1) {
                                 counter--;
-                                price = price - 14.00;
+                                price = price - 15.00;
                               }
                             });
                           },

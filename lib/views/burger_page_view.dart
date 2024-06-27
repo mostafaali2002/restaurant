@@ -52,7 +52,9 @@ class _BurgerPageState extends State<BurgerPage> {
                   GetIcon(
                     background: Colors.amber,
                     icon: const BurgerIcon(iconPath: ImagesPath.kblackburger),
-                    onTap: () {},
+                    onTap: () {
+                      Get.back();
+                    },
                   ),
                   const Spacer(flex: 1),
                   GetIcon(

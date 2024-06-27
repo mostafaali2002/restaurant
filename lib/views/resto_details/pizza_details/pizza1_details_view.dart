@@ -17,7 +17,7 @@ class PizzaDetails1 extends StatefulWidget {
 }
 
 class _BurgerDetailsState extends State<PizzaDetails1> {
-  double price = 16.00;
+  double price = 15.00;
   int counter = 1;
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,8 @@ class _BurgerDetailsState extends State<PizzaDetails1> {
                 ),
               ),
               const SizedBox(height: 12),
-              const FoodDetailsImage(imagePath: "assets/images/bigpizza.png"),
+              const FoodDetailsImage(
+                  imagePath: "assets/images/bigpizza1_4.png"),
               const SizedBox(height: 27),
               const FoodNameAndRate(foodName: "Margherita", foodRate: "6.0"),
               const SizedBox(height: 41),
@@ -66,7 +67,7 @@ class _BurgerDetailsState extends State<PizzaDetails1> {
                             setState(() {
                               if (counter > 1) {
                                 counter--;
-                                price = price - 16.00;
+                                price = price - 15.00;
                               }
                             });
                           },
@@ -80,7 +81,7 @@ class _BurgerDetailsState extends State<PizzaDetails1> {
                           onPressed: () {
                             setState(() {
                               counter++;
-                              price = price + 14.00;
+                              price = price + 15.00;
                             });
                           },
                         ),

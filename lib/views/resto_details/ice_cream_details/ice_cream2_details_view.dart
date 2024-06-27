@@ -39,7 +39,7 @@ class _BurgerDetailsState extends State<IceCreamDetails2> {
                 ),
               ),
               const SizedBox(height: 12),
-              const FoodDetailsImage(imagePath: "assets/images/bigice.png"),
+              const FoodDetailsImage(imagePath: "assets/images/bigice2.png"),
               const SizedBox(height: 27),
               const FoodNameAndRate(foodName: "Oreo Cookies", foodRate: "5.0"),
               const SizedBox(height: 41),

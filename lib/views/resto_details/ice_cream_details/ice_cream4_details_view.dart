@@ -17,7 +17,7 @@ class IceCreamDetails4 extends StatefulWidget {
 }
 
 class _BurgerDetailsState extends State<IceCreamDetails4> {
-  double price = 5.00;
+  double price = 9.00;
   int counter = 1;
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class _BurgerDetailsState extends State<IceCreamDetails4> {
                 ),
               ),
               const SizedBox(height: 12),
-              const FoodDetailsImage(imagePath: "assets/images/bigice.png"),
+              const FoodDetailsImage(imagePath: "assets/images/bigice4.png"),
               const SizedBox(height: 27),
               const FoodNameAndRate(foodName: "Oreo Cookies", foodRate: "5.0"),
               const SizedBox(height: 41),
@@ -64,7 +64,7 @@ class _BurgerDetailsState extends State<IceCreamDetails4> {
                             setState(() {
                               if (counter > 1) {
                                 counter--;
-                                price = price - 5.00;
+                                price = price - 9.00;
                               }
                             });
                           },
@@ -78,7 +78,7 @@ class _BurgerDetailsState extends State<IceCreamDetails4> {
                           onPressed: () {
                             setState(() {
                               counter++;
-                              price = price + 14.00;
+                              price = price + 9.00;
                             });
                           },
                         ),

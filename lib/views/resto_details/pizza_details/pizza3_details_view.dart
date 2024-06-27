@@ -80,7 +80,7 @@ class _BurgerDetailsState extends State<PizzaDetails3> {
                           onPressed: () {
                             setState(() {
                               counter++;
-                              price = price + 14.00;
+                              price = price + 16.00;
                             });
                           },
                         ),
