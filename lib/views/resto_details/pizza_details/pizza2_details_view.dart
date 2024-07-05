@@ -41,7 +41,7 @@ class _BurgerDetailsState extends State<PizzaDetails2> {
               const SizedBox(height: 12),
               const FoodDetailsImage(imagePath: "assets/images/bigpizza2.png"),
               const SizedBox(height: 27),
-              const FoodNameAndRate(foodName: "Margherita", foodRate: "6.0"),
+              const FoodNameAndRate(foodName: "Vegetables", foodRate: "6.0"),
               const SizedBox(height: 41),
               const FoodDescribtion(
                   foodDetails:

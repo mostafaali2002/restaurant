@@ -6,8 +6,8 @@ class HelloText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
-      "Hello Mostafa",
+    return Text(
+      "Hello ${Name.value.text}",
       style: TextStyle(fontSize: 30, fontFamily: CColors.kfontfamilymoul),
     );
   }

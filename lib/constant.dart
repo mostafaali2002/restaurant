@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 abstract class CColors {
   static const kbackgroundcolor = 0xff191616;
   static const ksearchcolor = 0xffFFFFFF;
@@ -27,3 +29,5 @@ abstract class Styles {
   static const kfontsize19 = 19;
   static const kfontsize30 = 30;
 }
+
+TextEditingController Name = TextEditingController();

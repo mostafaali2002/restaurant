@@ -41,11 +41,9 @@ class _BurgerDetailsState extends State<PopCornDetails> {
               const SizedBox(height: 12),
               const FoodDetailsImage(imagePath: "assets/images/bigpopcorn.png"),
               const SizedBox(height: 27),
-              const FoodNameAndRate(foodName: "Beef Burger", foodRate: "5.0"),
+              const FoodNameAndRate(foodName: "Pop Corn", foodRate: "5.0"),
               const SizedBox(height: 41),
-              const FoodDescribtion(
-                  foodDetails:
-                      "Beef Burger with spices adn cucmbers our chef special healthy and fat free dish."),
+              const FoodDescribtion(foodDetails: "pop corn  "),
               const SizedBox(height: 70),
               const FoodDetails(prepareTime: "20", calories: "65"),
               const SizedBox(height: 50),
