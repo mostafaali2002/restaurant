@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:resto/constant.dart';
 import 'package:resto/views/burger_page_view.dart';
 import 'package:resto/views/ice_cream_page_view.dart';
@@ -50,8 +48,11 @@ class _PopCornPageState extends State<PopCornPage> {
                     background: const Color(CColors.kbackgroundcolor),
                     icon: const BurgerIcon(iconPath: ImagesPath.kwhiteburger),
                     onTap: () {
-                      Get.to(() => const BurgerPage(),
-                          transition: Transition.fadeIn);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const BurgerPage(),
+                          ));
                     },
                   ),
                   const Spacer(flex: 1),
@@ -59,8 +60,11 @@ class _PopCornPageState extends State<PopCornPage> {
                     background: const Color(CColors.kbackgroundcolor),
                     icon: const PizaaIcon(iconPath: ImagesPath.kwhitepizza),
                     onTap: () {
-                      Get.to(() => const PizzaPage(),
-                          transition: Transition.fadeIn);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PizzaPage(),
+                          ));
                     },
                   ),
                   const Spacer(flex: 1),
@@ -75,8 +79,11 @@ class _PopCornPageState extends State<PopCornPage> {
                     icon:
                         const IceCreamIcon(iconPath: ImagesPath.kwhiteicecream),
                     onTap: () {
-                      Get.to(() => const IceCreamPage(),
-                          transition: Transition.fadeIn);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const IceCreamPage(),
+                          ));
                     },
                   ),
                   const Spacer(flex: 3),
@@ -89,16 +96,22 @@ class _PopCornPageState extends State<PopCornPage> {
                 smalltext1: "fresh Corn",
                 price1: "16.0",
                 ontap: () {
-                  Get.to(() => const PopCornDetails(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PopCornDetails(),
+                      ));
                 },
                 imagePath2: "assets/images/pop.png",
                 foodName2: "Butter",
                 smalltext2: "fresh Corn",
                 price2: "14.0",
                 ontap2: () {
-                  Get.to(() => const PopCornDetails(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PopCornDetails(),
+                      ));
                 },
               ),
               const SizedBox(height: 22),
@@ -108,16 +121,22 @@ class _PopCornPageState extends State<PopCornPage> {
                 smalltext1: "fresh Corn",
                 price1: "14.0",
                 ontap: () {
-                  Get.to(() => const PopCornDetails(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PopCornDetails(),
+                      ));
                 },
                 imagePath2: "assets/images/pop.png",
                 foodName2: "Chocolate",
                 smalltext2: "fresh Corn",
                 price2: "15.0",
                 ontap2: () {
-                  Get.to(() => const PopCornDetails(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PopCornDetails(),
+                      ));
                 },
               ),
             ]),
@@ -125,6 +144,5 @@ class _PopCornPageState extends State<PopCornPage> {
         ),
       ),
     );
-    ;
   }
 }

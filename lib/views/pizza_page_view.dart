@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:resto/constant.dart';
 import 'package:resto/views/burger_page_view.dart';
 import 'package:resto/views/ice_cream_page_view.dart';
@@ -54,8 +51,11 @@ class _PizzaPageState extends State<PizzaPage> {
                     background: const Color(CColors.kbackgroundcolor),
                     icon: const BurgerIcon(iconPath: ImagesPath.kwhiteburger),
                     onTap: () {
-                      Get.to(() => const BurgerPage(),
-                          transition: Transition.fadeIn);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const BurgerPage(),
+                          ));
                     },
                   ),
                   const Spacer(flex: 1),
@@ -69,8 +69,11 @@ class _PizzaPageState extends State<PizzaPage> {
                     background: const Color(CColors.kbackgroundcolor),
                     icon: const PopCornIcon(iconPath: ImagesPath.kwhitepop),
                     onTap: () {
-                      Get.to(() => const PopCornPage(),
-                          transition: Transition.fadeIn);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PopCornPage(),
+                          ));
                     },
                   ),
                   const Spacer(flex: 1),
@@ -79,8 +82,11 @@ class _PizzaPageState extends State<PizzaPage> {
                     icon:
                         const IceCreamIcon(iconPath: ImagesPath.kwhiteicecream),
                     onTap: () {
-                      Get.to(() => const IceCreamPage(),
-                          transition: Transition.fadeIn);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const IceCreamPage(),
+                          ));
                     },
                   ),
                   const Spacer(flex: 3),
@@ -93,16 +99,22 @@ class _PizzaPageState extends State<PizzaPage> {
                 smalltext1: "fresh Pizza",
                 price1: "15.0",
                 ontap: () {
-                  Get.to(() => const PizzaDetails1(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PizzaDetails1(),
+                      ));
                 },
                 imagePath2: "assets/images/pizaa1.png",
                 foodName2: "Vegetables",
                 smalltext2: "fresh Pizza",
                 price2: "13.0",
                 ontap2: () {
-                  Get.to(() => const PizzaDetails2(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PizzaDetails2(),
+                      ));
                 },
               ),
               const SizedBox(height: 22),
@@ -112,16 +124,22 @@ class _PizzaPageState extends State<PizzaPage> {
                 smalltext1: "fresh Pizza",
                 price1: "16.0",
                 ontap: () {
-                  Get.to(() => const PizzaDetails3(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PizzaDetails3(),
+                      ));
                 },
                 imagePath2: "assets/images/pizaa.png",
                 foodName2: "Smoked",
                 smalltext2: "fresh Pizza",
                 price2: "14.0",
                 ontap2: () {
-                  Get.to(() => const PizzaDetails4(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PizzaDetails4(),
+                      ));
                 },
               ),
             ]),

@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:resto/constant.dart';
 import 'package:resto/views/resto_details/burger_details/burger1_details_view.dart';
 import 'package:resto/views/resto_details/pizza_details/pizza1_details_view.dart';
@@ -31,7 +28,7 @@ class SearchPage extends StatelessWidget {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15)),
                       hintText: "Search",
-                      hintStyle: TextStyle(fontSize: 20)),
+                      hintStyle: const TextStyle(fontSize: 20)),
                 ),
               ),
               const SizedBox(
@@ -45,7 +42,7 @@ class SearchPage extends StatelessWidget {
                       fontFamily: CColors.kfontfamilymoul, fontSize: 18),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Padding(
@@ -53,13 +50,19 @@ class SearchPage extends StatelessWidget {
                 child: FoodCarditemList(
                     imagePath1: "assets/images/beef.png",
                     ontap: () {
-                      Get.to(() => const BurgerDetails1(),
-                          transition: Transition.leftToRight);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const BurgerDetails1(),
+                          ));
                     },
                     imagePath2: "assets/images/pizaa.png",
                     ontap2: () {
-                      Get.to(() => const PizzaDetails1(),
-                          transition: Transition.leftToRight);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PizzaDetails1(),
+                          ));
                     },
                     foodName1: "Double Beef",
                     foodName2: "chicken ranch",

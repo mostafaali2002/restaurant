@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/get_core.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 import 'package:resto/constant.dart';
 import 'package:resto/widgets/custom_buuton_price.dart';
 import 'package:resto/widgets/food_describtion.dart';
@@ -31,7 +29,7 @@ class _BurgerDetailsState extends State<IceCreamDetails1> {
             children: [
               IconButton(
                 onPressed: () {
-                  Get.back();
+                  Navigator.pop(context);
                 },
                 icon: const Icon(
                   Icons.arrow_back_outlined,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:like_button/like_button.dart';
 import 'package:resto/constant.dart';
 import 'package:resto/widgets/food_price.dart';

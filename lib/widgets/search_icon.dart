@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get/get.dart';
 import 'package:resto/views/search_page_view.dart';
 
 class SearchIcon extends StatelessWidget {
@@ -14,7 +13,11 @@ class SearchIcon extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: IconButton(
           onPressed: () {
-            Get.to(() => const SearchPage(), transition: Transition.fadeIn);
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SearchPage(),
+                ));
           },
           icon: const Icon(
             FontAwesomeIcons.magnifyingGlass,

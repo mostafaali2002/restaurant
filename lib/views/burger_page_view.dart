@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:resto/constant.dart';
-
 import 'package:resto/views/ice_cream_page_view.dart';
 import 'package:resto/views/pizza_page_view.dart';
 import 'package:resto/views/pop_corn_page_view.dart';
@@ -53,7 +51,7 @@ class _BurgerPageState extends State<BurgerPage> {
                     background: Colors.amber,
                     icon: const BurgerIcon(iconPath: ImagesPath.kblackburger),
                     onTap: () {
-                      Get.back();
+                      Navigator.pop(context);
                     },
                   ),
                   const Spacer(flex: 1),
@@ -61,8 +59,11 @@ class _BurgerPageState extends State<BurgerPage> {
                     background: const Color(CColors.kbackgroundcolor),
                     icon: const PizaaIcon(iconPath: ImagesPath.kwhitepizza),
                     onTap: () {
-                      Get.to(() => const PizzaPage(),
-                          transition: Transition.fadeIn);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PizzaPage(),
+                          ));
                     },
                   ),
                   const Spacer(flex: 1),
@@ -70,8 +71,11 @@ class _BurgerPageState extends State<BurgerPage> {
                     background: const Color(CColors.kbackgroundcolor),
                     icon: const PopCornIcon(iconPath: ImagesPath.kwhitepop),
                     onTap: () {
-                      Get.to(() => const PopCornPage(),
-                          transition: Transition.fadeIn);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PopCornPage(),
+                          ));
                     },
                   ),
                   const Spacer(flex: 1),
@@ -80,8 +84,11 @@ class _BurgerPageState extends State<BurgerPage> {
                     icon:
                         const IceCreamIcon(iconPath: ImagesPath.kwhiteicecream),
                     onTap: () {
-                      Get.to(() => const IceCreamPage(),
-                          transition: Transition.fadeIn);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const IceCreamPage(),
+                          ));
                     },
                   ),
                   const Spacer(flex: 3),
@@ -94,16 +101,22 @@ class _BurgerPageState extends State<BurgerPage> {
                 smalltext1: "fresh Burger",
                 price1: "14.0",
                 ontap: () {
-                  Get.to(() => const BurgerDetails1(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BurgerDetails1(),
+                      ));
                 },
                 imagePath2: "assets/images/beef2.png",
                 foodName2: "Thick Beef",
                 smalltext2: "fresh Burger",
                 price2: "11.0",
                 ontap2: () {
-                  Get.to(() => const BurgerDetails2(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BurgerDetails2(),
+                      ));
                 },
               ),
               const SizedBox(height: 22),
@@ -113,16 +126,22 @@ class _BurgerPageState extends State<BurgerPage> {
                 smalltext1: "fresh Burger",
                 price1: "15.0",
                 ontap: () {
-                  Get.to(() => const BurgerDetails3(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BurgerDetails3(),
+                      ));
                 },
                 imagePath2: "assets/images/beef4.png",
                 foodName2: "chicken burger",
                 smalltext2: "fresh Burger",
                 price2: "10.0",
                 ontap2: () {
-                  Get.to(() => const BurgerDetails4(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BurgerDetails4(),
+                      ));
                 },
               ),
             ]),

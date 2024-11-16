@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:resto/constant.dart';
 import 'package:resto/views/burger_page_view.dart';
 import 'package:resto/views/pizza_page_view.dart';
@@ -54,8 +51,11 @@ class _IceCreamPageState extends State<IceCreamPage> {
                     background: const Color(CColors.kbackgroundcolor),
                     icon: const BurgerIcon(iconPath: ImagesPath.kwhiteburger),
                     onTap: () {
-                      Get.to(() => const BurgerPage(),
-                          transition: Transition.fadeIn);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const BurgerPage(),
+                          ));
                     },
                   ),
                   const Spacer(flex: 1),
@@ -63,8 +63,11 @@ class _IceCreamPageState extends State<IceCreamPage> {
                     background: const Color(CColors.kbackgroundcolor),
                     icon: const PizaaIcon(iconPath: ImagesPath.kwhitepizza),
                     onTap: () {
-                      Get.to(() => const PizzaPage(),
-                          transition: Transition.fadeIn);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PizzaPage(),
+                          ));
                     },
                   ),
                   const Spacer(flex: 1),
@@ -72,8 +75,11 @@ class _IceCreamPageState extends State<IceCreamPage> {
                     background: const Color(CColors.kbackgroundcolor),
                     icon: const PopCornIcon(iconPath: ImagesPath.kwhitepop),
                     onTap: () {
-                      Get.to(() => const PopCornPage(),
-                          transition: Transition.fadeIn);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PopCornPage(),
+                          ));
                     },
                   ),
                   const Spacer(flex: 1),
@@ -93,16 +99,22 @@ class _IceCreamPageState extends State<IceCreamPage> {
                 smalltext1: "fresh Ice",
                 price1: "5.0",
                 ontap: () {
-                  Get.to(() => const IceCreamDetails1(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const IceCreamDetails1(),
+                      ));
                 },
                 imagePath2: "assets/images/ice2.png",
                 foodName2: "Straweberry",
                 smalltext2: "fresh Ice",
                 price2: "10.0",
                 ontap2: () {
-                  Get.to(() => const IceCreamDetails2(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const IceCreamDetails2(),
+                      ));
                 },
               ),
               const SizedBox(height: 22),
@@ -112,16 +124,22 @@ class _IceCreamPageState extends State<IceCreamPage> {
                 smalltext1: "fresh Ice",
                 price1: "5.0",
                 ontap: () {
-                  Get.to(() => const IceCreamDetails3(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const IceCreamDetails3(),
+                      ));
                 },
                 imagePath2: "assets/images/ice4.png",
                 foodName2: "Milk",
                 smalltext2: "fresh Ice",
                 price2: "9.0",
                 ontap2: () {
-                  Get.to(() => const IceCreamDetails4(),
-                      transition: Transition.leftToRight);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const IceCreamDetails4(),
+                      ));
                 },
               ),
             ]),

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:resto/views/burger_page_view.dart';
 import 'package:resto/views/login_page_view.dart';
 
 void main() {
@@ -13,10 +11,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: LoginPage(),
+      home: const LoginPage(),
     );
   }
 }

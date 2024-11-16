@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:resto/constant.dart';
 import 'package:resto/views/burger_page_view.dart';
 
@@ -50,7 +49,11 @@ class LoginPage extends StatelessWidget {
               child: MaterialButton(
                 onPressed: () {
                   if (formkey.currentState!.validate()) {
-                    Get.to(() => BurgerPage(), transition: Transition.native);
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const BurgerPage(),
+                        ));
                   }
                 },
                 child: const Text("Login",
